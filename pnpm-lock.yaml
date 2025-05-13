@@ -8,6 +8,9 @@ dependencies:
   astro:
     specifier: ^5.7.12
     version: 5.7.12(typescript@5.8.3)
+  hotkeypad:
+    specifier: ^1.0.2
+    version: 1.0.2
 
 packages:
 
@@ -1452,6 +1455,10 @@ packages:
       hast-util-parse-selector: 4.0.0
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
+    dev: false
+
+  /hotkeypad@1.0.2:
+    resolution: {integrity: sha512-vvhHZfhNx5LtRoO8+db2Y8Q4QKoaqVbeu2iGMZjV9NAYmHfWTFQNJMWkmqVyhYwoTPLoKDd7GgjaG3rOtTF5pA==}
     dev: false
 
   /html-escaper@3.0.3:
