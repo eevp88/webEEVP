@@ -58,6 +58,6 @@ pnpm dev
 
 ## 🔑 Licencia
 
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev) modificado por mi. 
+[MIT](LICENSE) - Creado por [**midudev**](https://midu.dev) modificado por mi. 
 
 
