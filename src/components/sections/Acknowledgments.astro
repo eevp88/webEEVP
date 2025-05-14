@@ -1,0 +1,11 @@
+---
+import Section from "../Section.astro"
+
+import { acknowledgments } from "@cv"
+
+const { summary } = acknowledgments
+---
+
+<Section title="Agradecimientos" printed="0" >
+  <p set:html={summary}></p>
+</Section>

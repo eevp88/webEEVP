@@ -31,33 +31,34 @@
     {
       "name": "West Ingeniería",
       "position": "Líder de Célula",
-      "url": "",
+      "url": "https://www.west-ingenieria.cl/",
       "startDate": "2024-08-01",
       "endDate": "2025-03-01",
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
-      "highlights": ["Started the company"],
+      "summary": "Lideré un equipo ágil de desarrollo conformado por 4 desarrolladores, asignando tareas según fortalezas individuales y prioridades técnicas. Coordiné la comunicación con áreas internas y clientes, asegurando el cumplimiento del 100% de los SLA acordados con clientes. Promoví buenas prácticas de desarrollo y crecimiento profesional en el equipo.",
+      "highlights": ["Lider de Equipo"],
       "city": "Valdivia",
       "country": "Chile"
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
-      "highlights": ["Started the company"],
+      "name": "West Ingeniería",
+      "position": "Ingeniero de Software",
+      "url": "https://www.west-ingenieria.cl/",
+      "startDate": "2017-04-01",
+      "endDate": "2024-08-01",
+      "summary": "He participado en el desarrollo de soluciones frontend y backend para proyectos logísticos de alto volumen, como Fueltrack (Enex S.A.), donde integré JD Edwards y Power BI para habilitar reportería en tiempo real, gestioné bases de datos Oracle y brindé soporte crítico en producción. En Forestruck7 (Arauco, Anchile, Trans Pacific Fibre), contribuí al diseño e implementación de un sistema que emite más de 80.000 guías mensuales y automatiza el cálculo de proformas, reduciendo los tiempos administrativos en un 60%. Además, en Wing Suite (Unilever, Colun), desarrollé módulos para la gestión de logística de patio, optimizando la coordinación de más de 100 operaciones diarias de embarque y desembarque. También diseñé e implementé el enrolamiento de camiones y el control de asignación de tokens para la recepción de datos GPS, mejorando la trazabilidad y eliminando la duplicidad de datos.",
+      "highlights": ["Ingeniería de Software"],
       "city": "Valdivia",
       "country": "Chile"
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
-      "highlights": ["Started the company"],
-      "city": "Valdivia",
+      "name": "Bolsa de Comercio de Santiago",
+      "position": "Practicante",
+      "url": "https://www.bolsadesantiago.com/",
+      "startDate": "2013-01-02",
+      "endDate": "2013-03-05",
+      "summary": "Desarrollé de documentación de sistema de transacción de Fondos Mutuos(FFMM). Realice mantención y soporte de Sistema de Transacción de FFMM",
+      "highlights": ["Practica"],
+      "city": "Santiago",
       "country": "Chile"
     }
   ],
@@ -223,51 +224,23 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "imscindustrial.cl",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes"
+      "description": "Sitio Web corporativo de IMSC Industrial, pequeñá empresa que realiza mantención de calderas y proyectos de ingeniería en general para la industria manufacturtera",
+      "highlights": ["Web Corporativa", "En desarrollo"],
+      "url": "https://imscindustrial.cl/",
+      "github": "https://github.com/eevp88/webimsc"
     },
     {
-      "name": "AdventJS",
+      "name": "Portafolio",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com"
+      "description": "Projecto personal de mi portafolio hecho en Astro",
+      "highlights": ["Portafolio", "CV", "En Desarrollo"],
+      "url": "https://enzovera.dev",
+      "github": "https://github.com/eevp88/webEEVP"
     }
-  ]
+  ],
+  "acknowledgments": {
+    "summary": "Quiero dar las gracias a <a href='https://midu.dev/' target='_blank'>Midudev</a> por este diseño de portafolio, que me ha servido de inspiración para crear el mío. Gracias por compartir tu conocimiento y por ser un referente en la comunidad de desarrollo web."
+  }
 }
