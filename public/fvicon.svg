@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 64">
+  <rect width="128" height="64" fill="#0D1117"/>
+  <text x="30" y="50%" font-size="28" fill="white" font-family="Fira Code, monospace" dominant-baseline="middle">&gt;_</text>
+  <text x="70" y="50%" font-size="28" fill="white" font-family="Fira Code, monospace" dominant-baseline="middle">EV</text>
+</svg>
