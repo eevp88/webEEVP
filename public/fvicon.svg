@@ -2,4 +2,10 @@
   <rect width="128" height="64" fill="#0D1117"/>
   <text x="30" y="50%" font-size="28" fill="white" font-family="Fira Code, monospace" dominant-baseline="middle">&gt;_</text>
   <text x="70" y="50%" font-size="28" fill="white" font-family="Fira Code, monospace" dominant-baseline="middle">EV</text>
+      <style>
+        path { fill: #000; }
+        @media (prefers-color-scheme: dark) {
+            path { fill: #FFF; }
+        }
+    </style>
 </svg>
