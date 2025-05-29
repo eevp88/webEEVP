@@ -35,7 +35,14 @@
       "startDate": "2024-08-01",
       "endDate": "2025-03-01",
       "summary": "Lideré un equipo ágil de desarrollo conformado por 4 desarrolladores, asignando tareas según fortalezas individuales y prioridades técnicas. Coordiné la comunicación con áreas internas y clientes, asegurando el cumplimiento del 100% de los SLA acordados con clientes. Promoví buenas prácticas de desarrollo y crecimiento profesional en el equipo.",
-      "highlights": ["Lider de Equipo"],
+      "highlights": [
+        "Lider de Equipo",
+        "Ingeniería de Software",
+        "JavaScript",
+        "PL/SQL",
+        "Oracle Bases de datos",
+        "Bootstrap"
+      ],
       "city": "Valdivia",
       "country": "Chile"
     },
@@ -46,7 +53,13 @@
       "startDate": "2017-04-01",
       "endDate": "2024-08-01",
       "summary": "He participado en el desarrollo de soluciones frontend y backend para proyectos logísticos de alto volumen, como Fueltrack (Enex S.A.), donde integré JD Edwards y Power BI para habilitar reportería en tiempo real, gestioné bases de datos Oracle y brindé soporte crítico en producción. En Forestruck7 (Arauco, Anchile, Trans Pacific Fibre), contribuí al diseño e implementación de un sistema que emite más de 80.000 guías mensuales y automatiza el cálculo de proformas, reduciendo los tiempos administrativos en un 60%. Además, en Wing Suite (Unilever, Colun), desarrollé módulos para la gestión de logística de patio, optimizando la coordinación de más de 100 operaciones diarias de embarque y desembarque. También diseñé e implementé el enrolamiento de camiones y el control de asignación de tokens para la recepción de datos GPS, mejorando la trazabilidad y eliminando la duplicidad de datos.",
-      "highlights": ["Ingeniería de Software"],
+      "highlights": [
+        "Ingeniería de Software",
+        "JavaScript",
+        "PL/SQL",
+        "Oracle Bases de datos",
+        "Bootstrap"
+      ],
       "city": "Valdivia",
       "country": "Chile"
     },
@@ -149,8 +162,8 @@
       "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
-      "name": "Tailwind",
-      "level": "Principiante",
+      "name": "Bootstrap",
+      "level": "Avanzado",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -187,6 +200,16 @@
       "name": "Astro",
       "level": "Intermedio",
       "keywords": ["Desarrollo Web", "Frontend", "SSR", "Static Generation"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Principiante",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
     },
     {
       "name": "React",
