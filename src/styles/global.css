@@ -1,0 +1,74 @@
+html.dark {
+    background-color: #1f2937;
+    color: #a1a1a1;
+}
+
+.dark .nav-links a,
+.dark h1 {
+    color: #fafafa;
+}
+
+.dark h2 {
+    color: #e2e2e2;
+}
+
+.dark .empresa {
+    color: #e2e2e2;
+}
+.dark article h1 {
+    font-weight: 498;
+    color: #e2e2e2 !important;
+}
+
+.dark article a {
+    color: #e2e2e2 !important;
+}
+
+.dark article h2 {
+    color: #e2e2e2 !important;
+    font-weight: 398;
+}
+
+.dark article h4 {
+    color: #e2e2e2 !important;
+}
+.dark article h3 {
+    color: #a1a1a1 !important;
+}
+.dark #normal-footer {
+    background-color: #1f2937 !important;
+    color: #a1a1a1;
+}
+.dark #hotkeypad {
+    --hotkeypad-bg-kbd: #1f2937;
+    --hotkeypad-bg-backdrop: #000;
+    --hotkeypad-bg-container: #1f2937;
+    --hotkeypad-bg-item-hover: #161e2e;
+    --hotkeypad-border-container: #374151;
+    --hotkeypad-border-container-hover: #9ca3af;
+    --hotkeypad-fg-muted: #d1d5db;
+}
+.dark #normal-footer > kbd {
+    padding-inline: 6px;
+    color: #d1d5db;
+    background-color: #1f2937;
+    border: 1px solid #9ca3af;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+p > a:hover {
+    text-decoration: underline !important;
+}
+
+.dark .skill {
+    background: #273952;
+    color: #d1d5db;
+}
+
+.dark footer span {
+    background: #273952 !important;
+    color: #d1d5db !important;
+}

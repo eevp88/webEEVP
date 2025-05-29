@@ -76,7 +76,7 @@
   "education": [
     {
       "institution": "Universidad Austral de Chile",
-      "url": "https://www",
+      "url": "https://ingenieria.uach.cl/carreras/informatica/",
       "area": "Ingeniero Civil en Informática",
       "studyType": "Licenciadoen ciencias de la Ingeniería",
       "startDate": "2007-01-01",
@@ -227,7 +227,14 @@
       "name": "imscindustrial.cl",
       "isActive": true,
       "description": "Sitio Web corporativo de IMSC Industrial, pequeñá empresa que realiza mantención de calderas y proyectos de ingeniería en general para la industria manufacturtera",
-      "highlights": ["Web Corporativa", "En desarrollo"],
+      "highlights": [
+        "Web Corporativa",
+        "En desarrollo",
+        "JavaScript",
+        "TypeScritp",
+        "Astro",
+        "CSS"
+      ],
       "url": "https://imscindustrial.cl/",
       "github": "https://github.com/eevp88/webimsc"
     },
@@ -235,7 +242,14 @@
       "name": "Portafolio",
       "isActive": true,
       "description": "Projecto personal de mi portafolio hecho en Astro",
-      "highlights": ["Portafolio", "CV", "En Desarrollo"],
+      "highlights": [
+        "Portafolio",
+        "CV",
+        "JavaScript",
+        "TypeScritp",
+        "Astro",
+        "CSS"
+      ],
       "url": "https://enzovera.dev",
       "github": "https://github.com/eevp88/webEEVP"
     }
