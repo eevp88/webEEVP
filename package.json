@@ -16,7 +16,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "astro": "^5.7.12",
+    "astro": "^6.4.8",
     "hotkeypad": "^1.0.2"
   },
   "devDependencies": {
