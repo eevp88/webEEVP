@@ -144,7 +144,7 @@ pnpm build
 
 ## Despliegue
 
-El sitio se despliega en [Vercel](https://vercel.com/): un commit con su `git push` al repositorio dispara el despliegue. El resultado de `pnpm build` es un sitio estático en `dist/`. El repositorio no incluye `vercel.json` ni un workflow de CI; la configuración del proyecto en Vercel se administra fuera del repositorio.
+El sitio se despliega en [Vercel](https://vercel.com/): un commit con su `git push` al repositorio dispara el despliegue. El resultado de `pnpm build` es un sitio estático en `dist/`. El repositorio no incluye `vercel.json`; la configuración del proyecto en Vercel se administra fuera del repositorio. Además, el workflow de GitHub Actions `.github/workflows/ci.yml` (job `verify`) se ejecuta en cada pull request y en cada push a `main`, e instala con `pnpm install --frozen-lockfile` y ejecuta `pnpm check`, `pnpm lint`, `pnpm format:check`, `pnpm test` y `pnpm build`. Ese CI solo verifica la calidad del código: no despliega.
 
 La URL canónica del sitio (`site` en `astro.config.mjs`) es `https://enzovera.dev`.
 
