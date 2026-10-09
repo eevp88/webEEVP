@@ -1,0 +1,29 @@
+schema: spec-driven
+context: |
+  Project: webEEVP (Astro 7 portfolio/CV site, static output).
+  Stack: Astro ^7 (Vite 8, Zod 4), Node >=22.12, TypeScript (astro/tsconfigs/strict), pnpm, hotkeypad.
+  Content source: cv.json (alias @cv); path aliases @/* -> src/*.
+  Structure: src/components/sections/*.astro, src/layouts, src/pages/index.astro, src/assets/icons.
+  Test runner: vitest (pnpm test) via getViteConfig; ESLint (pnpm lint) and Prettier (pnpm format:check); no CI yet.
+strict_tdd: true
+projects:
+  - path: "."
+    stack: "Astro 7 + TypeScript strict, pnpm, Node >=22.12"
+    test_command: "pnpm test"
+    build_command: "pnpm build"
+    typecheck_command: "pnpm check"
+    linter: "pnpm lint"
+    formatter: "pnpm format:check"
+testing:
+  runner: vitest
+  layers: {unit: true, integration: true, e2e: false}
+  coverage: false
+  quality: {linter: true, type_checker: true, formatter: true}
+rules:
+  proposal: ["Include rollback plan"]
+  specs: ["Use Given/When/Then scenarios"]
+  design: ["Respect existing Astro component/section structure"]
+  tasks: ["Keep tasks within 400 changed-line review budget"]
+  apply: ["Follow Strict TDD; verify with `pnpm test`, `pnpm check` and `pnpm build`"]
+  verify: ["Run `pnpm test`, `pnpm check` and `pnpm build`; report results honestly"]
+  archive: ["Merge delta specs into openspec/specs before archiving"]
