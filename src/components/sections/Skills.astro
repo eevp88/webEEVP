@@ -12,76 +12,66 @@ import GitHub from "@/assets/icons/GitHub.astro";
 import Tailwind from "@/assets/icons/tailwind.astro";
 import Next from "@/assets/icons/next.astro";
 import AstroBuild from "@/assets/icons/Astro.astro";
-import { skills } from "@cv";
+import { skills } from "@/lib/cv";
+import { resolveSkillIconKey, type SkillIconKey } from "@/lib/icons";
 import Swift from "@/assets/icons/swift.astro";
 import SwiftUI from "@/assets/icons/swiftui.astro";
 import Kotlin from "@/assets/icons/kotlin.astro";
 import Flutter from "@/assets/icons/flutter.astro";
 import Oracle from "@/assets/icons/Oracle.astro";
 import Latex from "@/assets/icons/latex.astro";
-const SKILLS_ICONS: Record<string, any> = {
-    HTML,
-    CSS,
-    JavaScript,
-    TypeScript,
-    React,
-    Node,
-    MySQL,
-    Git,
-    GitHub,
-    Next,
-    Tailwind,
-    Swift,
-    SwiftUI,
-    Kotlin,
-    Flutter,
-    AstroBuild,
-    Oracle,
-    Latex,
-};
+const SKILLS_ICONS = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  React,
+  Node,
+  MySQL,
+  Git,
+  GitHub,
+  Next,
+  Tailwind,
+  Swift,
+  SwiftUI,
+  Kotlin,
+  Flutter,
+  AstroBuild,
+  Oracle,
+  Latex,
+} satisfies Record<SkillIconKey, unknown>;
 ---
 
 <Section title="Habilidades">
-    <ul>
-        {
-            skills.map(({ name }) => {
-                let iconName =
-                    name === "Next.js"
-                        ? "Next"
-                        : name === "Astro"
-                          ? "AstroBuild"
-                          : name === "PL/SQL"
-                            ? "Oracle"
-                            : name === "LaTeX"
-                              ? "Latex"
-                              : name;
-                const Icon = SKILLS_ICONS[iconName];
+  <ul>
+    {skills.map(({ name }) => {
+      const iconKey = resolveSkillIconKey(name);
+      const Icon = iconKey && SKILLS_ICONS[iconKey];
 
-                return (
-                    <li class="skill">
-                        {Icon && <Icon />} <span>{name}</span>
-                    </li>
-                );
-            })
-        }
-    </ul>
+      return (
+        <li class="skill">
+          {Icon && <Icon />} <span>{name}</span>
+        </li>
+      );
+    })}
+  </ul>
 </Section>
 <style>
-    ul {
-        display: inline-flex;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 
-    li {
-        align-items: center;
-        background: #eee;
-        border-radius: 6px;
-        color: black;
-        display: flex;
-        font-size: 0.8rem;
-        font-weight: 500;
-        gap: 4px;
-        padding: 0.2rem 0.6rem;
-    }
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
 </style>

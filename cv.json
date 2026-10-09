@@ -36,7 +36,7 @@
       "endDate": "2025-03-01",
       "summary": "Lideré un equipo ágil de desarrollo conformado por 4 desarrolladores, asignando tareas según fortalezas individuales y prioridades técnicas. Coordiné la comunicación con áreas internas y clientes, asegurando el cumplimiento del 100% de los SLA acordados con clientes. Promoví buenas prácticas de desarrollo y crecimiento profesional en el equipo.",
       "highlights": [
-        "Lider de Equipo",
+        "Líder de Equipo",
         "Ingeniería de Software",
         "JavaScript",
         "PL/SQL",
@@ -69,8 +69,8 @@
       "url": "https://www.bolsadesantiago.com/",
       "startDate": "2013-01-02",
       "endDate": "2013-03-05",
-      "summary": "Desarrollé de documentación de sistema de transacción de Fondos Mutuos(FFMM). Realice mantención y soporte de Sistema de Transacción de FFMM",
-      "highlights": ["Practica"],
+      "summary": "Desarrollé documentación de sistema de transacción de Fondos Mutuos(FFMM). Realicé mantención y soporte de Sistema de Transacción de FFMM",
+      "highlights": ["Práctica"],
       "city": "Santiago",
       "country": "Chile"
     }
@@ -91,7 +91,7 @@
       "institution": "Universidad Austral de Chile",
       "url": "https://ingenieria.uach.cl/carreras/informatica/",
       "area": "Ingeniero Civil en Informática",
-      "studyType": "Licenciadoen ciencias de la Ingeniería",
+      "studyType": "Licenciado en ciencias de la Ingeniería",
       "startDate": "2007-01-01",
       "endDate": "2014-01-01",
       "score": "5.9",
@@ -143,7 +143,12 @@
     {
       "name": "PL/SQL",
       "level": "Avanzado",
-      "key": ["Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"]
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
     },
     {
       "name": "Node",
@@ -220,7 +225,7 @@
       "name": "LaTeX",
       "level": "Intermedio",
       "keywords": [
-        "directamentetación",
+        "Documentación",
         "Matemáticas",
         "Ciencia de Datos",
         "Presentaciones"
@@ -249,12 +254,12 @@
     {
       "name": "imscindustrial.cl",
       "isActive": true,
-      "description": "Sitio Web corporativo de IMSC Industrial, pequeñá empresa que realiza mantención de calderas y proyectos de ingeniería en general para la industria manufacturtera",
+      "description": "Sitio Web corporativo de IMSC Industrial, pequeña empresa que realiza mantención de calderas y proyectos de ingeniería en general para la industria manufacturera",
       "highlights": [
         "Web Corporativa",
         "En desarrollo",
         "JavaScript",
-        "TypeScritp",
+        "TypeScript",
         "Astro",
         "CSS"
       ],
@@ -264,12 +269,12 @@
     {
       "name": "Portafolio",
       "isActive": true,
-      "description": "Projecto personal de mi portafolio hecho en Astro",
+      "description": "Proyecto personal de mi portafolio hecho en Astro",
       "highlights": [
         "Portafolio",
         "CV",
         "JavaScript",
-        "TypeScritp",
+        "TypeScript",
         "Astro",
         "CSS"
       ],

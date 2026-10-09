@@ -1,13 +1,13 @@
 ---
-import { basics } from "@cv"
+import { basics } from "@/lib/cv";
 
 interface Props {
-  title: string
+  title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 
-const { image, summary, url } = basics
+const { image, summary, url } = basics;
 ---
 
 <!doctype html>
@@ -25,7 +25,6 @@ const { image, summary, url } = basics
     <meta property="og:title" content={title} />
     <meta property="og:description" content={summary} />
     <meta property="og:image" content="" />
-
   </head>
   <body>
     <slot />
