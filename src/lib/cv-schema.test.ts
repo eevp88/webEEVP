@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest"
-import { CvSchema } from "@/lib/cv-schema"
+import { describe, expect, it } from "vitest";
+import { CvSchema } from "@/lib/cv-schema";
 
 /** Minimal valid CV: only the required sections, no filler sections. */
 function minimalCv() {
@@ -60,66 +60,66 @@ function minimalCv() {
       },
     ],
     acknowledgments: { summary: "Thanks" },
-  }
+  };
 }
 
-type Cv = ReturnType<typeof minimalCv>
+type Cv = ReturnType<typeof minimalCv>;
 
 function issuePaths(result: ReturnType<typeof CvSchema.safeParse>) {
-  return result.success ? [] : result.error.issues.map((i) => i.path.join("."))
+  return result.success ? [] : result.error.issues.map((i) => i.path.join("."));
 }
 
 describe("CvSchema", () => {
   it("accepts a minimal valid CV", () => {
-    const result = CvSchema.safeParse(minimalCv())
-    expect(result.success).toBe(true)
+    const result = CvSchema.safeParse(minimalCv());
+    expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.basics.name).toBe("Ada Lovelace")
-      expect(result.data.work[0].city).toBe("Valdivia")
+      expect(result.data.basics.name).toBe("Ada Lovelace");
+      expect(result.data.work[0].city).toBe("Valdivia");
     }
-  })
+  });
 
   it("accepts work[].endDate null (current job) and a non-null date", () => {
-    const current = minimalCv()
-    ;(current.work[0] as { endDate: string | null }).endDate = null
-    expect(CvSchema.safeParse(current).success).toBe(true)
-    expect(CvSchema.safeParse(minimalCv()).success).toBe(true)
-  })
+    const current = minimalCv();
+    (current.work[0] as { endDate: string | null }).endDate = null;
+    expect(CvSchema.safeParse(current).success).toBe(true);
+    expect(CvSchema.safeParse(minimalCv()).success).toBe(true);
+  });
 
   it("rejects a date that is not YYYY-MM-DD", () => {
-    const bad = minimalCv()
-    bad.work[0].startDate = "2024/08/01"
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("work.0.startDate")
-  })
+    const bad = minimalCv();
+    bad.work[0].startDate = "2024/08/01";
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("work.0.startDate");
+  });
 
   it("rejects a CV without acknowledgments", () => {
-    const bad: Partial<Cv> = minimalCv()
-    delete bad.acknowledgments
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("acknowledgments")
-  })
+    const bad: Partial<Cv> = minimalCv();
+    delete bad.acknowledgments;
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("acknowledgments");
+  });
 
   it("reports basics.name in the issue path when it is missing", () => {
-    const bad = minimalCv() as { basics: Partial<Cv["basics"]> }
-    delete bad.basics.name
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("basics.name")
-  })
+    const bad = minimalCv() as { basics: Partial<Cv["basics"]> };
+    delete bad.basics.name;
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("basics.name");
+  });
 
   it("reports the full path of a number inside work[].highlights", () => {
-    const bad = minimalCv() as { work: { highlights: unknown[] }[] }
-    bad.work[0].highlights = [42]
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("work.0.highlights.0")
-  })
+    const bad = minimalCv() as { work: { highlights: unknown[] }[] };
+    bad.work[0].highlights = [42];
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("work.0.highlights.0");
+  });
 
   it("accepts a CV without the filler sections", () => {
-    const cv = minimalCv() as Record<string, unknown>
+    const cv = minimalCv() as Record<string, unknown>;
     for (const key of [
       "volunteer",
       "awards",
@@ -128,10 +128,10 @@ describe("CvSchema", () => {
       "interests",
       "references",
     ]) {
-      expect(key in cv).toBe(false)
+      expect(key in cv).toBe(false);
     }
-    expect(CvSchema.safeParse(cv).success).toBe(true)
-  })
+    expect(CvSchema.safeParse(cv).success).toBe(true);
+  });
 
   it("accepts a CV that includes the filler sections", () => {
     const cv = {
@@ -174,28 +174,28 @@ describe("CvSchema", () => {
       ],
       interests: [{ name: "Wildlife", keywords: ["Ferrets"] }],
       references: [{ name: "Ref", reference: "Reference" }],
-    }
-    const result = CvSchema.safeParse(cv)
-    expect(result.success).toBe(true)
+    };
+    const result = CvSchema.safeParse(cv);
+    expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.awards?.[0].title).toBe("Award")
+      expect(result.data.awards?.[0].title).toBe("Award");
     }
-  })
+  });
 
   it("rejects a malformed filler section when it is present", () => {
-    const bad = { ...minimalCv(), awards: [{ title: 7 }] }
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("awards.0.title")
-  })
+    const bad = { ...minimalCv(), awards: [{ title: 7 }] };
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("awards.0.title");
+  });
 
   it("rejects a skill without keywords (Q5: content is corrected, not tolerated)", () => {
-    const bad = minimalCv() as { skills: Record<string, unknown>[] }
+    const bad = minimalCv() as { skills: Record<string, unknown>[] };
     bad.skills = [
       { name: "PL/SQL", level: "Avanzado", key: ["Bases de Datos"] },
-    ]
-    const result = CvSchema.safeParse(bad)
-    expect(result.success).toBe(false)
-    expect(issuePaths(result)).toContain("skills.0.keywords")
-  })
-})
+    ];
+    const result = CvSchema.safeParse(bad);
+    expect(result.success).toBe(false);
+    expect(issuePaths(result)).toContain("skills.0.keywords");
+  });
+});

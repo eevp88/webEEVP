@@ -27,7 +27,11 @@ describe("SocialIcon", () => {
   });
 
   it("forwards size and style to the svg", async () => {
-    const html = await render({ network: "X", size: 24, style: "margin-right: 8px" });
+    const html = await render({
+      network: "X",
+      size: 24,
+      style: "margin-right: 8px",
+    });
     expect(html).toContain('width="24"');
     expect(html).toContain('style="margin-right: 8px"');
   });

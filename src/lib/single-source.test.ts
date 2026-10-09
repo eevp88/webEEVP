@@ -10,7 +10,11 @@ const sources = import.meta.glob<string>("/src/**/*.{astro,ts}", {
 
 // The raw @cv alias may only be imported by the validated accessor and by the
 // smoke test that checks the alias itself.
-const ALLOWED_RAW_IMPORTERS = ["/src/lib/cv.ts", "/src/lib/cv.test.ts", "/src/lib/smoke.test.ts"];
+const ALLOWED_RAW_IMPORTERS = [
+  "/src/lib/cv.ts",
+  "/src/lib/cv.test.ts",
+  "/src/lib/smoke.test.ts",
+];
 
 describe("CV single source of truth", () => {
   it("only the accessor (and alias tests) import @cv directly", () => {

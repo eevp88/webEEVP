@@ -1,17 +1,17 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import About from "@/components/sections/About.astro"
-import Education from "@/components/sections/Education.astro"
-import Experience from "@/components/sections/Experience.astro"
-import Hero from "@/components/sections/Hero.astro"
-import Projects from "@/components/sections/Projects.astro"
-import Skills from "@/components/sections/Skills.astro"
-import KeyboardManager from "@/components/KeyboardManager.astro"
-import Acknowledgments from "@/components/sections/Acknowledgments.astro"
+import About from "@/components/sections/About.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import Acknowledgments from "@/components/sections/Acknowledgments.astro";
 
-import { basics } from "@/lib/cv"
-const { name, label } = basics
+import { basics } from "@/lib/cv";
+const { name, label } = basics;
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
@@ -22,7 +22,7 @@ const { name, label } = basics
     <Education />
     <Projects />
     <Skills />
-    <Acknowledgments/>
+    <Acknowledgments />
   </main>
 
   <KeyboardManager />
@@ -41,4 +41,3 @@ const { name, label } = basics
     }
   }
 </style>
-

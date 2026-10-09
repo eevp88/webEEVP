@@ -1,11 +1,11 @@
-import raw from "@cv"
-import { CvSchema, type CV } from "@/lib/cv-schema"
+import raw from "@cv";
+import { CvSchema, type CV } from "@/lib/cv-schema";
 
 /**
  * Validated CV data. Parsing runs at module load, so an invalid cv.json fails
  * `pnpm build` and `pnpm test` with the offending field path in the error.
  */
-export const cv: CV = CvSchema.parse(raw)
+export const cv: CV = CvSchema.parse(raw);
 
 export const {
   basics,
@@ -15,4 +15,4 @@ export const {
   languages,
   projects,
   acknowledgments,
-} = cv
+} = cv;
