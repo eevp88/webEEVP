@@ -1,0 +1,13 @@
+---
+import { getSocialIcon, renderSvg } from "@/lib/icons";
+
+interface Props {
+  network: string;
+  size?: number;
+  style?: string;
+}
+
+const { network, size, style } = Astro.props;
+---
+
+<Fragment set:html={renderSvg(getSocialIcon(network), { size, style })} />
