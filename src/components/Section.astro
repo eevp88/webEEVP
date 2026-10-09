@@ -1,17 +1,17 @@
 ---
-// se ejecuta en el servidor o en build time <----
+interface Props {
+  title?: string
+  printed?: boolean
+}
+
 const { title, printed = true } = Astro.props
-const className = printed == "0" ?  "no-print" : ""
+const className = printed ? "" : "no-print"
 ---
 
 <section class={className} >
   {title && <h2>{title}</h2>}
   <slot />
 </section>
-
-<script>
-  // se ejecuta en el cliente <----
-</script>
 
 <style>
   section {
