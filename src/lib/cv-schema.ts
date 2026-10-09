@@ -141,11 +141,3 @@ export const CvSchema = z.object({
 });
 
 export type CV = z.infer<typeof CvSchema>;
-export type Basics = z.infer<typeof BasicsSchema>;
-export type Profile = z.infer<typeof ProfileSchema>;
-export type Work = z.infer<typeof WorkSchema>;
-export type Education = z.infer<typeof EducationSchema>;
-export type Skill = z.infer<typeof SkillSchema>;
-export type Language = z.infer<typeof LanguageSchema>;
-export type Project = z.infer<typeof ProjectSchema>;
-export type Acknowledgments = z.infer<typeof AcknowledgmentsSchema>;

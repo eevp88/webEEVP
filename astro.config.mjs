@@ -3,6 +3,6 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  // Provisional (Q1 undecided): taken from cv.json basics.url.
+  // Production domain, served by Vercel.
   site: "https://enzovera.dev",
 });
