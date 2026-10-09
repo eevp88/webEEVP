@@ -31,7 +31,7 @@ describe("KeyboardManager source", () => {
     expect(source).not.toContain("@/types");
   });
 
-  it("has no console.log calls", () => {
+  it("has no console logging calls", () => {
     expect(source).not.toMatch(/console\.log/);
   });
 
