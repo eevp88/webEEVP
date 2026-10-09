@@ -130,3 +130,63 @@ describe("skill icons without a matching skill", () => {
     );
   });
 });
+
+describe("skill icon registry vs Skills.astro", () => {
+  // Keys that Skills.astro maps to a component. Keep in sync with the
+  // `satisfies Record<SkillIconKey, unknown>` map in that file.
+  const SKILLS_COMPONENT_KEYS = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node",
+    "MySQL",
+    "Git",
+    "GitHub",
+    "Tailwind",
+    "AstroBuild",
+    "Oracle",
+    "Latex",
+    "Next",
+    "Swift",
+    "SwiftUI",
+    "Kotlin",
+    "Flutter",
+  ];
+
+  it("has exactly the keys that Skills.astro maps", () => {
+    expect([...SKILL_ICON_KEYS].sort()).toEqual(
+      [...SKILLS_COMPONENT_KEYS].sort(),
+    );
+  });
+
+  it("resolves every skill of cv.json except the ones without an icon", () => {
+    const withoutIcon = ["Bootstrap"];
+    for (const { name } of skills) {
+      if (withoutIcon.includes(name)) {
+        expect(resolveSkillIconKey(name), name).toBeUndefined();
+      } else {
+        expect(resolveSkillIconKey(name), name).toBeDefined();
+      }
+    }
+  });
+});
+
+describe("Skills.astro wiring", () => {
+  const sources = import.meta.glob("../components/sections/Skills.astro", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  }) as Record<string, string>;
+  const source = Object.values(sources)[0] ?? "";
+
+  it("resolves icons through the registry instead of a ternary chain", () => {
+    expect(source).toContain("resolveSkillIconKey");
+    expect(source).not.toContain('name === "Next.js"');
+  });
+
+  it("declares an exhaustive component map with satisfies", () => {
+    expect(source).toMatch(/satisfies\s+Record<SkillIconKey,\s*unknown>/);
+  });
+});
