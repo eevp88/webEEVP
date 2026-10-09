@@ -31,7 +31,7 @@ El sitio es estático, está construido con [Astro](https://astro.build/) 7 y no
 
 ## Requisitos
 
-- Node.js `>=22.12` (campo `engines` de `package.json`). El archivo `.nvmrc` fija la versión mayor `22`.
+- Node.js `>=22.12` (campo `engines` de `package.json`). El archivo `.nvmrc` fija la versión mayor `24`.
 - [pnpm](https://pnpm.io/installation) `11.3.0`, la versión declarada en el campo `packageManager`. Con [Corepack](https://nodejs.org/api/corepack.html) habilitado se selecciona automáticamente.
 
 ## Instalación y uso
